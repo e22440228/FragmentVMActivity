@@ -1,4 +1,4 @@
-package edu.temple.diceroll
+    package edu.temple.diceroll
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -36,7 +36,8 @@ class DiceFragment : Fragment() {
             findViewById<Button>(R.id.rollButton).setOnClickListener {
 
                 // Generate random number
-                (Random.nextInt(sides!!) + 1).toString()
+                val numberRandom = Random.nextInt(sides!!) + 1
+                viewModel.updateNumber(numberRandom)
             }
         }
     }
